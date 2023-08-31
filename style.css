@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+*{
+    font-family: 'VT323', sans-serif;
+}
+
+.div1{
+    opacity: 100;
+}
+.div1.bye{
+    opacity: 0;;
+}
+
+.div2{
+    opacity: 0;
+    z-index: -1;
+}
+
+.div2.active{
+    opacity: 100;
+    z-index: 1;
+}
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.loading-bar {
+        opacity: 0;
+        display: flex;
+        width: 200px;
+        height: 15px;
+        background-color: #ccc;
+        /* margin: 20px; */
+        border: solid 4px #333;
+        position: relative;
+        z-index: -2;
+    }
+.loading-progress {
+        height: 100%;
+        background-color: #17c200;
+        position: absolute;
+        animation: loading 10s linear infinite;
+}
+
+.loading-bar.active {
+    opacity: 100;
+}
+
+
+
